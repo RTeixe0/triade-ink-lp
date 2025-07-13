@@ -7,6 +7,7 @@ import Depoimentos from "@/components/Depoimentos";
 import FAQ from "@/components/FAQ";
 import Contato from "@/components/Contato";
 import BotaoFlutuante from "@/components/BotaoFlutuante";
+import Avaliacao from "@/components/Avaliacao";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
         <Jean />
         <Key />
         <Depoimentos />
+        <Avaliacao />
         <FAQ />
         <Contato />
       </main>
