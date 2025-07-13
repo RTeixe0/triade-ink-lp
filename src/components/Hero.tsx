@@ -9,15 +9,15 @@ export default function Hero() {
   const links = [
     {
       nome: "Piercing com a Jú",
-      url: "https://wa.me/?text=Olá,%20quero%20agendar%20um%20piercing%20com%20a%20Júlia%20da%20Triade%20Ink!",
+      targetId: "julia",
     },
     {
       nome: "Tattoo com o Jean",
-      url: "https://wa.me/?text=Olá,%20quero%20fazer%20uma%20tattoo%20com%20o%20Jean%20da%20Triade%20Ink!",
+      targetId: "jean",
     },
     {
       nome: "Tattoo com o Key",
-      url: "https://wa.me/?text=Olá,%20quero%20fazer%20uma%20tattoo%20com%20o%20Key%20da%20Triade%20Ink!",
+      targetId: "key",
     },
   ];
 
@@ -61,7 +61,7 @@ export default function Hero() {
           onClick={() => setAbrirAgendamento(!abrirAgendamento)}
           className="px-6 py-3 bg-[#D4AF37] text-black font-medium rounded-full hover:opacity-90 transition"
         >
-          Chamar alguém da Triade
+          Conheça nossos profissionais
         </button>
 
         <AnimatePresence>
@@ -74,15 +74,17 @@ export default function Hero() {
               className="mt-6 flex flex-col md:flex-row items-center justify-center gap-4 w-full"
             >
               {links.map((link, i) => (
-                <a
+                <button
                   key={i}
-                  href={link.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  onClick={() => {
+                    const el = document.getElementById(link.targetId);
+                    if (el) el.scrollIntoView({ behavior: "smooth" });
+                    setAbrirAgendamento(false);
+                  }}
                   className="px-6 py-3 rounded-full border border-[#D4AF37]/40 bg-black/30 backdrop-blur-md text-[#f0e7c0] hover:bg-[#D4AF37]/10 hover:shadow-[0_0_12px_#D4AF37] transition-all duration-300 text-sm md:text-base"
                 >
                   {link.nome}
-                </a>
+                </button>
               ))}
             </motion.div>
           )}
