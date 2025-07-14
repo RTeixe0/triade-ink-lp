@@ -35,10 +35,17 @@ export default function Julia() {
           <h2 className="text-3xl md:text-4xl font-serif text-[#D4AF37] mb-4">
             Júlia – Body Piercing
           </h2>
-          <p className="text-gray-300 mb-6">
-            Especialista em piercings com foco em técnica segura, estética e
-            atendimento humanizado. Cada aplicação é feita com cuidado,
-            experiência e estilo.
+
+          <p className="text-gray-300 mb-4 leading-relaxed">
+            Piercings que vão além da estética: são expressão, atitude e
+            cuidado. Com técnica afiada, toque leve e olhar apurado, a Júlia
+            aplica cada joia como quem entende do que faz — e respeita cada
+            estilo.
+          </p>
+
+          <p className="text-gray-400 italic mb-6">
+            &quot;Respira pelo nariz... solta devagar pela boca.&quot; <br />
+            Pode confiar: o momento é seu.
           </p>
 
           <h3 className="text-xl font-medium text-white mb-3">Galeria</h3>
@@ -64,7 +71,7 @@ export default function Julia() {
               rel="noopener noreferrer"
               className="inline-block px-6 py-3 bg-[#D4AF37] text-black font-medium rounded-full hover:opacity-90 transition"
             >
-              Agendar com Júlia no WhatsApp
+              Agendar meu piercing com a Jú
             </a>
 
             <a

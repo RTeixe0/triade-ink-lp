@@ -9,6 +9,21 @@ export default function Sobre() {
       id="sobre"
       className="relative bg-black text-white px-6 py-24 flex flex-col items-center text-center overflow-hidden"
     >
+      {/* Linha divisora decorativa */}
+      <div className="relative w-full flex items-center justify-center mb-32 px-6">
+        {/* Linha dourada à esquerda */}
+        <div className="flex-grow h-[1px] bg-gradient-to-r from-transparent via-[#D4AF37]/40 to-[#D4AF37] mt-2" />
+
+        {/* Ícone ✦ com glow sutil */}
+        <div className="mx-4 text-[#D4AF37] text-2xl relative mt-2">
+          <span className="relative z-10">✦</span>
+          <div className="absolute inset-0 blur-[3px] opacity-25 bg-[#D4AF37] rounded-full scale-110" />
+        </div>
+
+        {/* Linha dourada à direita */}
+        <div className="flex-grow h-[1px] bg-gradient-to-l from-transparent via-[#D4AF37]/40 to-[#D4AF37] mt-2" />
+      </div>
+
       {/* Background Glow */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#ffffff0a] via-[#00000000] to-[#ffffff08] pointer-events-none" />
 
@@ -67,8 +82,20 @@ export default function Sobre() {
         />
       </div>
 
-      {/* Divider luminosa */}
-      <div className="mt-20 h-[1px] w-48 bg-[#D4AF37]/30 blur-sm" />
+      {/* Linha divisora decorativa */}
+      <div className="relative w-full flex items-center justify-center mt-32 px-6">
+        {/* Linha dourada à esquerda */}
+        <div className="flex-grow h-[1px] bg-gradient-to-r from-transparent via-[#D4AF37]/40 to-[#D4AF37] mt-2" />
+
+        {/* Ícone ✦ com glow sutil */}
+        <div className="mx-4 text-[#D4AF37] text-2xl relative mt-2">
+          <span className="relative z-10">✦</span>
+          <div className="absolute inset-0 blur-[3px] opacity-25 bg-[#D4AF37] rounded-full scale-110" />
+        </div>
+
+        {/* Linha dourada à direita */}
+        <div className="flex-grow h-[1px] bg-gradient-to-l from-transparent via-[#D4AF37]/40 to-[#D4AF37] mt-2" />
+      </div>
     </section>
   );
 }
