@@ -84,7 +84,7 @@ export default function Julia() {
               className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#D4AF37] text-black font-medium rounded-full hover:opacity-90 transition"
             >
               <MessageCircleMore className="w-5 h-5" />
-              Quero meu piercing
+              Quero meu piercing com a Ju
             </a>
 
             <a
