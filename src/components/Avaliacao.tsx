@@ -7,16 +7,24 @@ export default function Avaliacao() {
   return (
     <section className="bg-[#0D0D0D] text-white px-6 py-24 flex items-center justify-center">
       <div className="text-center max-w-xl">
-        <div className="mb-4 flex justify-center">
-          <Star className="text-[#D4AF37] w-10 h-10" fill="#D4AF37" />
+        {/* Ícone do Google */}
+        <div className="mb-6 flex justify-center">
+          <Image src="/google-icon.png" alt="Google" width={50} height={50} />
         </div>
+
+        {/* Título */}
         <h2 className="text-3xl md:text-4xl font-serif text-[#D4AF37] mb-4">
-          Já passou pela Tríade?
+          Viveu a experiência Triade Ink?
         </h2>
+
+        {/* Texto */}
         <p className="text-gray-300 mb-6">
-          Se curtiu o atendimento, o ambiente ou o trampo, deixa sua avaliação
-          no Google. Ajuda muito a fortalecer nosso corre!
+          Se saiu com aquele sorriso de quem se curtiu mais no espelho, já sabe:
+          deixa sua avaliação no Google. Ajuda a gente a continuar furando,
+          tatuando e representando com alma. 💛
         </p>
+
+        {/* Botão de Avaliação */}
         <a
           href="https://g.page/r/Cd25p8m33jpLEAI/review"
           target="_blank"
@@ -27,14 +35,12 @@ export default function Avaliacao() {
           Avaliar no Google
         </a>
 
-        <Image
-          src="/images/avaliacao-banner.png"
-          alt="Avalie a Tríade Ink"
-          width={800}
-          height={400}
-          className="mt-10 w-full rounded-xl shadow-xl hidden md:block"
-          priority
-        />
+        {/* 5 Estrelas Douradas */}
+        <div className="flex justify-center mt-6 gap-1">
+          {[...Array(5)].map((_, i) => (
+            <Star key={i} className="w-6 h-6 text-[#D4AF37]" fill="#D4AF37" />
+          ))}
+        </div>
       </div>
     </section>
   );

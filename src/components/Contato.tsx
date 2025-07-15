@@ -16,24 +16,23 @@ export default function Contato() {
             allowFullScreen={true}
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>{" "}
+          ></iframe>
         </div>
 
         {/* Infos */}
         <div>
           <h2 className="text-3xl md:text-4xl font-serif text-[#D4AF37] mb-6">
-            Visite o Estúdio
+            Chega mais!
           </h2>
 
           <div className="space-y-4 text-gray-300 mb-6">
             <p className="flex items-center gap-3">
               <MapPin size={20} className="text-[#D4AF37]" />
-              Rua Vereador Luís Mendes, 106b - Vila Leila, Mogi Guaçu - SP,
-              13847-234
+              Rua Vereador Luís Mendes, 106b – Vila Leila, Mogi Guaçu/SP
             </p>
             <p className="flex items-center gap-3">
               <Clock size={20} className="text-[#D4AF37]" />
-              Seg a Sáb – 10h às 19h
+              Atendimento: Seg a Sáb, das 10h às 19h
             </p>
             <p className="flex items-center gap-3">
               <Instagram size={20} className="text-[#D4AF37]" />
@@ -42,29 +41,58 @@ export default function Contato() {
           </div>
 
           <div className="flex flex-wrap gap-3">
-            {[
-              ["Tríade Ink", "https://www.instagram.com/triade.ink/"],
-              ["Júlia", "https://www.instagram.com/jubodyart_/"],
-              ["Jean", "https://www.instagram.com/jeanvinitattoo/"],
-              ["Key", "https://www.instagram.com/keyarttatoo/"],
-            ].map(([nome, url], i) => (
-              <a
-                key={i}
-                href={url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-4 py-2 bg-[#1C1C1C] text-[#D4AF37] border border-[#D4AF37] rounded-full text-sm hover:bg-[#D4AF37]/10 transition"
-              >
-                {nome}
-              </a>
-            ))}
+            <a
+              href="https://www.instagram.com/triade.ink/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4 py-2 bg-[#D4AF37] text-black rounded-full text-sm font-medium hover:opacity-90 transition"
+            >
+              Estúdio no Insta
+            </a>
+            <a
+              href="https://www.instagram.com/jubodyart_/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4 py-2 border border-[#D4AF37] text-[#D4AF37] rounded-full text-sm hover:bg-[#D4AF37]/10 transition"
+            >
+              Júlia • Piercing
+            </a>
+            <a
+              href="https://www.instagram.com/jeanvinitattoo/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4 py-2 border border-[#D4AF37] text-[#D4AF37] rounded-full text-sm hover:bg-[#D4AF37]/10 transition"
+            >
+              Jean • Tatuagem
+            </a>
+            <a
+              href="https://www.instagram.com/keyarttatoo/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4 py-2 border border-[#D4AF37] text-[#D4AF37] rounded-full text-sm hover:bg-[#D4AF37]/10 transition"
+            >
+              Key • Tatuagem
+            </a>
           </div>
         </div>
       </div>
 
       {/* Footer */}
-      <div className="mt-20 border-t border-[#333] pt-6 text-center text-gray-500 text-sm">
-        © {new Date().getFullYear()} Tríade Ink — Arte na Pele com Identidade.
+      <div className="mt-20 border-t border-[#333] pt-6 text-center text-gray-500 text-sm space-y-1">
+        <p>
+          © {new Date().getFullYear()} Tríade Ink • Arte que carrega identidade.
+        </p>
+        <p>
+          Desenvolvido por{" "}
+          <a
+            href="https://github.com/RTeixe0"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#D4AF37] hover:underline"
+          >
+            Renan Teixeira
+          </a>
+        </p>
       </div>
     </section>
   );

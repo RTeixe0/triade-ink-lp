@@ -1,28 +1,38 @@
 "use client";
 
 import { useState } from "react";
-import { ChevronDown } from "lucide-react";
+import {
+  ChevronDown,
+  BadgeCheck,
+  Syringe,
+  HeartPulse,
+  MessageCircleMore,
+} from "lucide-react";
 
 const perguntas = [
   {
-    pergunta: "Qual a idade mínima para fazer uma tatuagem ou piercing?",
+    pergunta: "Qual a idade mínima pra fazer uma tattoo ou piercing?",
     resposta:
-      "A idade mínima legal é 18 anos. Com autorização dos responsáveis e documentação, atendemos menores a partir de 16.",
+      "Se você já tem 18, tá liberado. Menores de 16 só com autorização e presença dos responsáveis, além de documentos. A gente faz tudo com responsabilidade.",
+    icon: <BadgeCheck className="text-[#D4AF37] w-5 h-5 mr-2" />,
   },
   {
-    pergunta: "Fazer piercing dói?",
+    pergunta: "Furar dói?",
     resposta:
-      "Depende da região, mas a maioria das pessoas relata um desconforto leve e rápido. O processo é rápido, seguro e com material esterilizado.",
+      "Depende da região, mas a maioria das pessoas fala que é mais tranquilo do que imaginavam. Rápido, seguro e com todo cuidado no processo.",
+    icon: <Syringe className="text-[#D4AF37] w-5 h-5 mr-2" />,
   },
   {
-    pergunta: "Quais os cuidados após fazer uma tattoo?",
+    pergunta: "E os cuidados depois da tattoo?",
     resposta:
-      "Higienizar com sabonete neutro, evitar exposição ao sol, piscina e manter a pele hidratada com pomada cicatrizante por pelo menos 15 dias.",
+      "Nada de sol, piscina ou arranhões. Lavar com sabonete neutro, manter hidratado com pomada e deixar a pele respirar. A gente passa tudinho no dia!",
+    icon: <HeartPulse className="text-[#D4AF37] w-5 h-5 mr-2" />,
   },
   {
-    pergunta: "Posso agendar diretamente pelo WhatsApp?",
+    pergunta: "Consigo agendar direto pelo WhatsApp?",
     resposta:
-      "Sim! Cada profissional tem um link direto para agendamento via WhatsApp aqui na página.",
+      "Sim! Cada artista tem um botão com link direto aqui na página. É só clicar, chamar e combinar o rolê.",
+    icon: <MessageCircleMore className="text-[#D4AF37] w-5 h-5 mr-2" />,
   },
 ];
 
@@ -37,7 +47,7 @@ export default function FAQ() {
     <section className="bg-black text-white px-6 py-20">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-serif text-[#D4AF37] mb-12 text-center">
-          Dúvidas Frequentes
+          Dúvidas na mente? A gente responde!
         </h2>
 
         <div className="space-y-4">
@@ -50,7 +60,10 @@ export default function FAQ() {
                 onClick={() => toggle(i)}
                 className="w-full text-left flex justify-between items-center px-6 py-4 bg-[#1C1C1C] hover:bg-[#2a2a2a] transition"
               >
-                <span className="font-medium">{item.pergunta}</span>
+                <div className="flex items-center">
+                  {item.icon}
+                  <span className="font-medium">{item.pergunta}</span>
+                </div>
                 <ChevronDown
                   className={`transition-transform ${
                     ativo === i ? "rotate-180" : ""
