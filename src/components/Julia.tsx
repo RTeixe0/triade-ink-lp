@@ -2,8 +2,21 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useEffect, useState } from "react";
+import { Instagram, MessageCircleMore } from "lucide-react";
 
 export default function Julia() {
+  const [whatsappUrl, setWhatsappUrl] = useState("");
+
+  useEffect(() => {
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    const mobileUrl =
+      "whatsapp://send?phone=5519993320279&text=Oi%2C%20Ju!%20Queria%20agendar%20um%20hor%C3%A1rio%20pra%20colocar%20um%20piercing%20%F0%9F%98%8A";
+    const desktopUrl =
+      "https://wa.me/5519993320279?text=Oi%2C%20Ju!%20Queria%20agendar%20um%20hor%C3%A1rio%20pra%20colocar%20um%20piercing%20%F0%9F%98%8A";
+    setWhatsappUrl(isMobile ? mobileUrl : desktopUrl);
+  }, []);
+
   return (
     <section
       id="julia"
@@ -38,9 +51,8 @@ export default function Julia() {
 
           <p className="text-gray-300 mb-4 leading-relaxed">
             Piercings que vão além da estética: são expressão, atitude e
-            cuidado. Com técnica afiada, toque leve e olhar apurado, a Júlia
-            aplica cada joia como quem entende do que faz — e respeita cada
-            estilo.
+            cuidado. Com técnica afiada, toque leve e olhar apurado, a Ju aplica
+            cada joia como quem entende do que faz — e respeita cada estilo.
           </p>
 
           <p className="text-gray-400 italic mb-6">
@@ -66,21 +78,23 @@ export default function Julia() {
 
           <div className="flex flex-col sm:flex-row gap-4">
             <a
-              href="https://wa.me/?text=Olá,%20quero%20agendar%20um%20piercing%20com%20a%20Júlia%20da%20Triade%20Ink!"
+              href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block px-6 py-3 bg-[#D4AF37] text-black font-medium rounded-full hover:opacity-90 transition"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#D4AF37] text-black font-medium rounded-full hover:opacity-90 transition"
             >
-              Agendar meu piercing com a Jú
+              <MessageCircleMore className="w-5 h-5" />
+              Quero meu piercing
             </a>
 
             <a
               href="https://www.instagram.com/jubodyart_/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block px-6 py-3 border border-[#D4AF37] text-[#D4AF37] font-medium rounded-full hover:bg-[#D4AF37]/10 transition"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-[#D4AF37] text-[#D4AF37] font-medium rounded-full hover:bg-[#D4AF37]/10 transition"
             >
-              Ver portfólio no Instagram
+              <Instagram className="w-5 h-5" />
+              Ver os trabalhos
             </a>
           </div>
         </motion.div>
